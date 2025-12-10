@@ -39,12 +39,12 @@ export default function PopCeilingCalculator() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      length: undefined,
-      width: undefined,
+      length: '' as any,
+      width: '' as any,
       designFactor: 1,
-      laborCostPerSqm: undefined,
-      marginPerSqm: undefined,
-      popBagCost: undefined,
+      laborCostPerSqm: '' as any,
+      marginPerSqm: '' as any,
+      popBagCost: '' as any,
       popBagCoverage: 1.5,
     },
   });
