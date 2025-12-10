@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'EstimateDecor',
+  title: 'Elevate Interior',
   description: 'Calculators for your home decoration projects.',
 };
 

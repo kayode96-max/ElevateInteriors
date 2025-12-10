@@ -59,7 +59,7 @@ export default function Home() {
       <div className="w-full max-w-3xl">
         <header className="text-center mb-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-primary font-headline">
-            EstimateDecor
+            Elevate Interior
           </h1>
           <p className="mt-2 text-lg text-muted-foreground">
             Quickly estimate materials for your next home project.
