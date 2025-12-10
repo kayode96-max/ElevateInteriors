@@ -25,7 +25,7 @@ export default function PaintEstimator() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      totalArea: undefined,
+      totalArea: '' as any,
       coats: 2,
       coverage: 350,
     },

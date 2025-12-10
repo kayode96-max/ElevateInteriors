@@ -24,8 +24,8 @@ export default function CeilingCalculator() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      length: undefined,
-      width: undefined,
+      length: '' as any,
+      width: '' as any,
     },
   });
 

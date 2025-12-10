@@ -26,9 +26,9 @@ export default function PanelEstimator() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      totalArea: undefined,
-      panelWidth: undefined,
-      panelHeight: undefined,
+      totalArea: '' as any,
+      panelWidth: '' as any,
+      panelHeight: '' as any,
       unit: 'ft',
     },
   });

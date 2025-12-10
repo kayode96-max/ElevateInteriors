@@ -25,8 +25,8 @@ export default function FloorCalculator() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      length: undefined,
-      width: undefined,
+      length: '' as any,
+      width: '' as any,
       wastage: 10,
     },
   });

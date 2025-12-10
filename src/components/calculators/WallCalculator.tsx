@@ -30,8 +30,8 @@ export default function WallCalculator() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      height: undefined,
-      walls: [{ length: undefined }],
+      height: '' as any,
+      walls: [{ length: '' as any }],
       doors: [],
       windows: [],
     },
@@ -90,7 +90,7 @@ export default function WallCalculator() {
                   </Button>
                 </div>
               ))}
-              <Button type="button" variant="outline" size="sm" onClick={() => appendWall({ length: undefined })}>
+              <Button type="button" variant="outline" size="sm" onClick={() => appendWall({ length: '' as any })}>
                 <PlusCircle className="mr-2 h-4 w-4" /> Add Wall
               </Button>
             </div>

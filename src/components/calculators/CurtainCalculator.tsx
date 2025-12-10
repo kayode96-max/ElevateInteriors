@@ -30,8 +30,8 @@ export default function CurtainCalculator() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      windowWidth: undefined,
-      windowHeight: undefined,
+      windowWidth: '' as any,
+      windowHeight: '' as any,
       fullness: "2.0",
       stackback: 6,
       overlap: 3,
