@@ -6,6 +6,7 @@ import {
   PanelTop,
   LayoutPanelTop,
   PaintRoller,
+  Layers,
 } from "lucide-react";
 import FloorCalculator from "@/components/calculators/FloorCalculator";
 import WallCalculator from "@/components/calculators/WallCalculator";
@@ -13,6 +14,7 @@ import CeilingCalculator from "@/components/calculators/CeilingCalculator";
 import CurtainCalculator from "@/components/calculators/CurtainCalculator";
 import PanelEstimator from "@/components/calculators/PanelEstimator";
 import PaintEstimator from "@/components/calculators/PaintEstimator";
+import PopCeilingCalculator from "@/components/calculators/PopCeilingCalculator";
 
 export default function Home() {
   const calculators = [
@@ -33,6 +35,12 @@ export default function Home() {
       label: "Ceiling",
       icon: <RectangleHorizontal className="h-5 w-5" />,
       component: <CeilingCalculator />,
+    },
+    {
+      value: "pop-ceiling",
+      label: "POP Ceiling",
+      icon: <Layers className="h-5 w-5" />,
+      component: <PopCeilingCalculator />,
     },
     {
       value: "curtains",
@@ -56,7 +64,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center p-4 sm:p-8 md:p-12">
-      <div className="w-full max-w-3xl">
+      <div className="w-full max-w-4xl">
         <header className="text-center mb-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-primary font-headline">
             Elevate Interior
@@ -67,7 +75,7 @@ export default function Home() {
         </header>
 
         <Tabs defaultValue="floor" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-6 h-auto p-1.5">
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 md:grid-cols-7 h-auto p-1.5">
             {calculators.map((calc) => (
               <TabsTrigger key={calc.value} value={calc.value} className="flex flex-col sm:flex-row gap-2 h-14 sm:h-12">
                 {calc.icon}
